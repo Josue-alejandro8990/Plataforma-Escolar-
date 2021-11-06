@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+    <title>blackboard-chafa-XD</title>
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="/Frontend/CSS/estilos.css">
+</head>  
+<body>
+    <form action="/Frontend/login" class="formulario" method="post">
+    
+    <h1>Login</h1>
+     <div class="contenedor">    
+         <div class="input-contenedor">
+         <i class="fas fa-envelope icon"></i>
+         <input name="email" id="email" type="text" placeholder="Correo Electronico">
+         
+         </div>
+         
+         <div class="input-contenedor">
+        <i class="fas fa-key icon"></i>
+         <input name="password" id="password" type="password" placeholder="Contraseña">
+         </div>
+
+         <div class="input-contenedor">
+            <i class="fas fa-user icon">  Datos</i>
+            <br>
+           <select name="tipo" id="tipo">
+            <option value="null"><selected>Selecciona una opcion</selected></option>
+            <option value="alumno">Alumno</option>
+            <option value="catedratico">Catedratico</option>
+           </select>
+         </div>
+         <input  type="submit" value="login" class="button">
+         <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+         <p>¿No tienes una cuenta? <a class="link" href="/Frontend/HTML/registrarvista.html">Registrate </a></p>
+     </div>
+    </form>
+</body>
+</html>

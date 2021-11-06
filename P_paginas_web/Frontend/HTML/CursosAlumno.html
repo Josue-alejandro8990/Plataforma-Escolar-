@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+        content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/Frontend/CSS/CursoAlumno.css">
+</head>
+
+<body>
+
+    <form action="Frontend/consultartareas" class="formulario" method="post">
+        <div class="contenedor">
+            <div class="input-contenedor">
+                <i class="fas fa-user icon"></i>
+                <input value="<%= nombre%>" name="nombre" type="text" placeholder="">>
+            </div>
+            <div class="input-contenedor">
+                <i class="fas fa-key icon"></i>
+                <input id="carnet" value="<%= carnet%>" name="carnet" type="text" placeholder="">
+            </div>
+        </div>
+    </form>
+    <!--formulario de cursos-->
+    <div id="frmcursos" class="formulario">
+        <h1>Mis Cursos</h1>
+        <div class="contenedor">
+            <div class="input-contenedor">
+                <i class="fas fa-book"></i>
+                <ul class="uno"><button id="btnanalisis">ANÁLISIS DE SISTEMAS II</button></ul>
+            </div>
+
+            <div class="input-contenedor">
+                <i class="fas fa-book"></i>
+                <ul class="dos"><button id="btnarquitectura">ARQUITECTURA DE COMPUTADORAS II</button></ul>
+            </div>
+
+            <div class="input-contenedor">
+                <i class="fas fa-book"></i>
+                <ul class="tres"><button id="btndesarrollo" >DESARROLLO WEB</button></ul>
+            </div>
+
+            <div class="input-contenedor">
+                <i class="fas fa-book"></i>
+                <ul class="cuatro"><button id="btnredes" >REDES DE COMPUTADORAS I</button>
+                </ul>
+            </div>
+
+            <div class="input-contenedor">
+                <i class="fas fa-book"></i>
+                <ul class="cinco"><button id="btnetica">ETICA PROFESIONAL</button></ul>
+            </div>
+
+            <ul class="dos"><a href="/Frontend/HTML/loginvista.html">Cerrar Sesion</a></ul>
+        </div>
+    </div>
+ <!--formulario de opciones-->
+    <div id="frminicio" class="formulario">
+     
+        <div class="input-contenedor">
+            <i class="fas fa-book"></i>
+             <ul class="uno"><button id="btnactividades" >Actividades</button></ul>
+             </div>
+    
+             <div class="input-contenedor">
+                <i class="fas fa-book"></i>
+                <ul class="dos"><button id="btnnotas">Calificaciones</button></ul>
+                </div>
+    
+                <ul class="dos"><button id="btncursos">Cursos</button></ul>
+    </div>
+    <!--formulario de actividades-->
+    <div id="frmactividades" class="formulario">
+        <h1>Mis Actividades</h1>
+        <div class="contenedor">
+            <div id="divactividad" class="input-contenedor">
+                <i class="fas fa-book"></i>
+
+            </div>
+            <ul class="dos"><button id="btninicio">Informacion</button></ul>
+        </div>
+    </div>
+
+
+    <!--formulario de notas-->
+    <div id="frmnotas" class="formulario">
+        <h1>Mis Calificaciones</h1>
+        <div class="contenedor">
+            <div id="divnotas"></div>
+            <ul class="dos"><button id="btninicio2">Informacion</button></ul>
+        </div>
+    </div>
+
+    <script src="/Frontend/JSFT/visualizarforms.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.all.min.js"></script>
+    <script>
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+        Toast.fire({
+            icon: 'success',
+            title: 'Bienvenido!!'
+        })
+    </script>
+</body>
+
+</html>

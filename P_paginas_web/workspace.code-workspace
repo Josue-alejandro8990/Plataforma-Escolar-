@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\REST-SERVER-CRUD-main"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "P_paginas_web"
+	}
+}

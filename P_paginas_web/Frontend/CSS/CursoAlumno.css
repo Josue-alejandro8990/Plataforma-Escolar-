@@ -1,0 +1,70 @@
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: url(../RESOURCE/curso.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+* {
+    box-sizing: border-box;
+}
+.contenedor{
+    width: 100%;
+    padding: 15px;
+}
+.formulario{
+    background: #fff;
+    margin-top: 100px;
+    padding: 3px;
+}
+h1{
+    text-align: center;
+    color: #1a2537;
+    font-size: 40px;
+}
+
+.input-contenedor{
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+}
+
+
+@media(min-width:768px)
+{
+    .formulario{
+        margin: auto;
+        width: 800px;
+        margin-top: 70px;
+        border-radius: 2%;
+    }
+}
+
+.uno{
+    text-align: center;
+}
+.dos{
+    text-align: center;
+}
+.tres{
+    text-align: center;
+}
+.cuatro{
+    text-align: center;
+}
+.cinco{
+    text-align: center;
+}
+
+#frmactividades{
+    display: none;
+}
+#frmnotas{
+    display: none;
+}
+
+
+
+
+
+

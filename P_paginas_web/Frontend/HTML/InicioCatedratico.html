@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <title></title>
+   <meta name="viewport"
+      content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+   <link rel="stylesheet" href="/Frontend/CSS/InicioCatedratico.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+</head>
+
+<body>
+   <!--formulario de inicio de catedraticos-->
+   <div id="frminiciocatedratico" class="formulario">
+      <h1>Informacion</h1>
+      <div class="contenedor">
+
+         <div class="input-contenedor">
+            <i class="fas fa-book"></i>
+            <ul class="uno"><button id="btncrearactividades">Crear Actividades</button></ul>
+         </div>
+
+         <div class="input-contenedor">
+            <i class="fas fa-book"></i>
+            <ul class="dos"><button id="btnasignarnotas">Asignar Calificaciones</a></ul>
+         </div>
+         <ul class="dos"><a class="link" href="/">Cerrar Sesion</a></ul>
+      </div>
+   </div>
+
+   <!--formulario de asignacion de actividades-->
+   <div id="frmasignaractividades" class="formulario">
+
+      <h1>Asignar Actividades</h1>
+      <div class="contenedor">
+
+         <p>
+            <div class="colum-md"></div>
+            <label>Fecha Asignacion
+               <input id="fasignacion" type="datetime-local" name="fecha_hora" required>
+            </label>
+         </p>
+
+         <p>
+            <div class="colum-md"></div>
+            <label>Fecha Culminacion
+               <input id="fculminacion" type="datetime-local" name="fecha_hora" required>
+            </label>
+         </p>
+      </div>
+      <div class="col-md-3 position-relative">
+         <label for="validationTooltip05" class="form-label">Puntos:</label>
+         <input id="nota" type="text" class="form-control"  required>
+
+      </div>
+
+      <div class="col-md-3 position-relative">
+         <label for="validationTooltip05" class="form-label">Agregar Tarea</label>
+         <input type="text" class="form-control" id="nombretarea" required>
+
+      </div>
+      <br>
+      <div class="form-floating">
+         <textarea class="form-control" placeholder="Leave a comment here" id="descripcion"
+            style="height: 100px"></textarea>
+         <label for="floatingTextarea2">Instrucciones</label>
+      </div>
+
+      <br>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+         <button id="btnenviartarea" class="btn btn-primary" type="button">Enviar</button>
+      </div>
+      <br>
+
+      <ul class="dos"><button id="btnregresar">Informacion</a></ul>
+   </div>
+   <!--formulario de actividades-->
+   <div id="frmactividades" class="formulario">
+      <h1>Revision de tareas Asignadas</h1>
+      <div id="tareas" class="contenedor">
+      </div>
+      <ul class="dos"><button id="btninicio">Informacion</button></ul>
+   </div>
+     <!--formulario de actividades entregadas-->
+   <div id="frmactividadesentregadas" class="formulario">
+      <h1>Revision de tareas Asignadas</h1>
+      <div id="tareasentregadas" class="contenedor">
+      </div>
+      <ul class="dos"><button id="btninicio2">Informacion</button></ul>
+   </div>
+   <!--formulario de asignacion de calificaciones-->
+   <div id="frmasignacionnotas" class="formulario">
+      <h1>Asignar Calificaciones</h1>
+      <div id="datostarea">
+
+      </div>
+      <div class="contenedor">
+         <div class="row g-2">
+            <div class="col-md">
+               <div class="form-floating">
+                  
+                  <input type="text" class="form-control" id="notaasignada">
+                  <label for="floatingInputGrid">Asignar Calificacion</label>
+               </div>
+            </div>
+
+            <br>
+            <div class="form-floating">
+               <textarea class="form-control" placeholder="Leave a comment here" id="comentario"
+                  style="height: 100px"></textarea>
+               <label for="floatingTextarea2">Comentario de Tarea</label>
+            </div>
+            <br>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+               <button id="btnenviarnota" class="btn btn-primary" type="button">Enviar</button>
+            </div>
+            <br>
+
+            <ul class="dos"><button id="btnregresar2">Informacion</button></ul>
+         </div>
+      </div>
+   </div>
+   <script defer src="/Frontend/JSFT/creartareas.js"></script>
+   <script defer src="/Frontend/JSFT/visualizarcatedratico.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.all.min.js"></script>
+   <script>
+      const Toast = Swal.mixin({
+         toast: true,
+         position: 'top-end',
+         showConfirmButton: false,
+         timer: 3000,
+         timerProgressBar: true,
+         didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+         }
+      })
+      Toast.fire({
+         icon: 'success',
+         title: 'Bienvenido!!'
+      })
+   </script>
+</body>
+
+</html>
